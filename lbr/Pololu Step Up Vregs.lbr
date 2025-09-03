@@ -112,9 +112,15 @@
 <pad name="EN" x="1.27" y="1.27" drill="1" diameter="1.9304"/>
 <pad name="GND@1" x="8.89" y="1.27" drill="1" diameter="1.9304"/>
 <text x="0" y="15.746" size="1.016" layer="25" font="vector">&gt;NAME</text>
-<text x="0" y="-1.446" size="1.016" layer="27" font="vector">&gt;VALUE</text>
+<text x="10" y="15.754" size="1.016" layer="27" font="vector">&gt;VALUE</text>
 <pad name="VIN@2" x="6.35" y="1.27" drill="1" diameter="1.9304"/>
 <pad name="GND@2" x="11.43" y="1.27" drill="1" diameter="1.9304"/>
+<smd name="P$1" x="1.27" y="0.27" dx="2" dy="4" layer="1"/>
+<smd name="P$2" x="3.81" y="0.27" dx="2" dy="4" layer="1"/>
+<smd name="P$3" x="6.35" y="0.27" dx="2" dy="4" layer="1"/>
+<smd name="P$4" x="8.89" y="0.27" dx="2" dy="4" layer="1"/>
+<smd name="P$5" x="11.43" y="0.27" dx="2" dy="4" layer="1"/>
+<smd name="P$6" x="13.97" y="0.27" dx="2" dy="4" layer="1"/>
 </package>
 </packages>
 <symbols>
@@ -179,10 +185,10 @@
 <devices>
 <device name="" package="POLOLU_STEPUP_U3V40X">
 <connects>
-<connect gate="G$1" pin="EN" pad="EN"/>
-<connect gate="G$1" pin="GND" pad="GND@1 GND@2"/>
-<connect gate="G$1" pin="VIN" pad="VIN@1 VIN@2"/>
-<connect gate="G$1" pin="VOUT" pad="VOUT"/>
+<connect gate="G$1" pin="EN" pad="EN P$1"/>
+<connect gate="G$1" pin="GND" pad="GND@1 GND@2 P$4 P$5"/>
+<connect gate="G$1" pin="VIN" pad="P$2 P$3 VIN@1 VIN@2"/>
+<connect gate="G$1" pin="VOUT" pad="P$6 VOUT"/>
 </connects>
 <technologies>
 <technology name=""/>
